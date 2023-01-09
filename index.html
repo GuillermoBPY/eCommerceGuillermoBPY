@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="./src/styles/style.css">
+  <title>Academlo Store</title>
+</head>
+
+<body>
+  <main class="container">
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__nav--logobox">
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav__logo-icon">
+              <g>
+                <g>
+                  <path
+                    d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                  </path>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a href="#">
+            <h3>STORE</h3>
+          </a>
+        </div>
+        <ul class="header__nav--menu">
+          <li><i class='bx bx-x'></i></li>
+          <li class="header__nav--menuitem">
+            <a href="#">
+              <h3>Home</h3>
+            </a>
+          </li>
+          <li class="header__nav--menuitem">
+            <a href="#productsgrid">
+              <h3>Products</h3>
+            </a>
+          </li>
+        </ul>
+        <ul class="header__nav--icons">
+          <li><i id="darkbttn" class='bx bx-moon'></i></li>
+          <li><i class='bx bx-shopping-bag'> <span id="shoppingbagspan" class="shoppingbagspan"></span></i></li>
+          <li><i class='bx bx-customize'></i></i></li>
+        </ul>
+        <div class="header__mycart">
+          <i class='bx bx-x mycart-bx-x'></i>
+          <h2>My Cart</h2>
+          <div class="mycart__body">
+          </div>
+          <div class="mycart__checkout">
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="home">
+      <figure class="home__figure">
+        <img class="home__figure--img" src="./src/img/home.png" alt="homeimg">
+      </figure>
+      <div class="home__info">
+        <h1>New Sweatshirt <br>COLLECTIONS 2022</h1>
+        <p>Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern
+          design.</p>
+        <p>$14.00</p>
+        <div class="home__info--buttons">
+          <button><a href="#">Discover</a></button>
+          <button id="2" class="btnaddtocart">ADD TO CART</button>
+        </div>
+      </div>
+    </section>
+    <section id="productsgrid" class="productsgrid">
+      <di class="productsgrid__models">
+        <div id="Showall" class="productsgrid__models--box">
+          <h4>Show All</h4>
+          <p>show all products</p>
+        </div>
+        <div id="Hoodies" class="productsgrid__models--box">
+          <h4>Hoodies</h4>
+          <p>1 products</p>
+        </div>
+        <div id="Shirts" class="productsgrid__models--box">
+          <h4>Shirts</h4>
+          <p>1 products</p>
+        </div>
+        <div id="Sweatshirts" class="productsgrid__models--box">
+          <h4>Sweatshirts</h4>
+          <p>1 products</p>
+        </div>
+      </di>
+      <div class="productsgrid__cards">
+    </section>
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__grid--box">
+          <h3>Our information</h3>
+          <ul>
+            <li><a href="#">Toluca - México</a></li>
+          </ul>
+        </div>
+        <div class="footer__grid--box">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Support Center</a></li>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Copy Righ</a></li>
+          </ul>
+        </div>
+        <div class="footer__grid--box">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#">Hoodies</a></li>
+            <li><a href="#">Shirts</a></li>
+            <li><a href="#">Sweatshirts</a></li>
+          </ul>
+        </div>
+        <div class="footer__grid--box">
+          <h3>Social</h3>
+          <ul>
+            <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+            <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+            <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer__hr">
+      <div class="footer__copyrigths">
+        <a href="https://www.academlo.com/" target="_blank">
+          <p>© ACADEMLO. All rigths reserved</p>
+        </a>
+      </div>
+    </footer>
+  </main>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>
