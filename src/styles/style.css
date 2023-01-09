@@ -89,6 +89,23 @@ p {
 .bgccolor {
   background-color: var(--containercolor);
 }
+#loading{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bodycolor);
+  z-index: 10;
+  font-size: 25rem;
+  display: grid;
+  place-content: center;
+}
+
+#loading .bxl-mailchimp{
+  animation: ping 0.8s ease-in-out infinite both;
+}
 
 .header__nav {
   max-width: 1024px;
@@ -562,7 +579,14 @@ body.dark-mode .bgccolor .header__nav--icons {
   text-align: center;
   padding: 4rem 0rem 1rem;
 }
-
+#github {
+  padding: 2rem 0 0;
+  color: var(--maincolorbg);
+}
+#github i {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
 /*-----------------BREAKPOINTS RESPONSIVE-----------------*/
 
 /* @media screen and (max-width: 320px) {
@@ -651,5 +675,19 @@ body.dark-mode .bgccolor .header__nav--icons {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes ping {
+  0% {
+            transform: scale(0.2);
+    opacity: 0.8;
+  }
+  80% {
+            transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+            transform: scale(2.2);
+    opacity: 0;
   }
 }

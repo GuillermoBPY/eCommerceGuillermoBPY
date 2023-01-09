@@ -369,3 +369,12 @@ printGrid();
 printProductsInCart();
 printTotalCart();
 printAmountValue();
+
+
+
+const loading = document.querySelector(".loading")
+
+setTimeout (function(){
+
+  loading.style.display = "none";},5000)
+
