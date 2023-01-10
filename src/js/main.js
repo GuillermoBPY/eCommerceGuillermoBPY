@@ -150,7 +150,7 @@ productsGridCards.addEventListener("click", function (e) {
   if (e.target.classList.contains("bx-plus")) {
     let idParent = e.target.parentElement.id;
     let selectProduct = items.find((item) => item.id == idParent);
-    if (selectProduct.quantity === 0) {
+    if (selectProduct.quantity == 0) {
       return alert("Cantidad no disponible!");
     }
     if (cartObj[idParent]) {
