@@ -1,6 +1,9 @@
 //--------------------Funciones de Tipo Style---------------------
 
 import "./stylescript.js"
+import {changeDarkMode} from "./darkmode.js"
+import {toggleShopCheckout} from "./stylescript.js"
+
 
 ///----------------------PRODUCTS DATA----------------------------------------------
 
@@ -39,6 +42,7 @@ localStorage.setItem("data", JSON.stringify(maindata))
 let data = JSON.parse(localStorage.getItem("data"))
 let items = JSON.parse(localStorage.getItem("newArray")) || [...data];
 let cartObj = JSON.parse(localStorage.getItem("cartObj")) || {};
+
 ////---------------------------------------PRODUCTS HOME / GRID---------------------------------------
 
 //-----Funcionalidad Boton Add to Cart del Home-----
@@ -245,10 +249,15 @@ myCartCheckout.addEventListener("click", function (e) {
   }
 
   alert("Gracias por su compra!");
+  toggleShopCheckout()
   printGrid(items);
   printProductsInCart();
 });
 
+
+
+
+changeDarkMode()
 printGrid(items);
 printProductsInCart();
 
