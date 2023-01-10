@@ -261,7 +261,7 @@ const myCartCheckoutBtn = document.querySelector(".mycart__checkout--btn");
 myCartCheckout.addEventListener("click", function (e) {
   if (e.target.classList.contains("mycart__checkout--btn")) {
     const cartActual = Object.values(cartObj);
-    if (!cartActual.length) return alert("Su carrito esta vacio");
+    if (!cartActual.length) return alert("Su carrito esta vacio!");
     const res = confirm("Desea realizar la compra?");
 
     if (!res) return;
