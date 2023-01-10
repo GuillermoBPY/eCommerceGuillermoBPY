@@ -104,6 +104,7 @@ p {
 }
 
 #loading .bxl-mailchimp {
+  color: var(--maintextcolor);
   animation: ping 0.8s ease-in-out infinite both;
 }
 
