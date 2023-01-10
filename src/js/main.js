@@ -376,5 +376,5 @@ const loading = document.querySelector(".loading")
 
 setTimeout (function(){
 
-  loading.style.display = "none";},5000)
+  loading.style.display = "none";},3000)
 
