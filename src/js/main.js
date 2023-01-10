@@ -4,7 +4,7 @@ import "./stylescript.js"
 
 ///----------------------PRODUCTS DATA----------------------------------------------
 
-const data = [
+const maindata = [
   {
     id: 1,
     name: "Hoodies",
@@ -33,8 +33,12 @@ const data = [
     quantity: 20,
   }
 ];
-let items = [...data];
-let cartObj = {};
+//localStorage.setItem("tarjetas", JSON.stringify(tarjetas));
+
+localStorage.setItem("data", JSON.stringify(maindata))
+let data = JSON.parse(localStorage.getItem("data"))
+let items = JSON.parse(localStorage.getItem("newArray")) || [...data];
+let cartObj = JSON.parse(localStorage.getItem("cartObj")) || {};
 ////---------------------------------------PRODUCTS HOME / GRID---------------------------------------
 
 //-----Funcionalidad Boton Add to Cart del Home-----
@@ -156,6 +160,7 @@ function printProductsInCart() {
     `;
   });
   myCartBody.innerHTML = html;
+  localStorage.setItem("cartObj", JSON.stringify(cartObj));
   printAmountValue();
   printTotalCart();
 }
@@ -234,7 +239,8 @@ myCartCheckout.addEventListener("click", function (e) {
         newArray.push(item);
       }
     });
-    items = newArray;
+    localStorage.setItem("newArray", JSON.stringify(newArray))
+    items =  JSON.parse(localStorage.getItem("newArray"));
     cartObj = {};
   }
 
