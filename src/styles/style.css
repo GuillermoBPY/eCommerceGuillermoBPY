@@ -60,6 +60,7 @@ li {
 body {
   background-color: var(--bodycolor);
   overflow: hidden;
+  height: 100%;
   
 }
 
