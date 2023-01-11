@@ -26,6 +26,9 @@
   scroll-margin-top: 50px;
 }
 
+html {
+  height: -webkit-fill-available;
+}
 body.dark-mode {
   --maincolorbg: hsl(182, 53%, 74%);
   --addbuttonbg: hsl(246, 16%, 12%);
