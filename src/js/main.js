@@ -204,7 +204,7 @@ function printTotalCart() {
 
   if (!cartActual.length) {
     myCartBody.innerHTML = `
-        <figure class="mycart__body--empty" style="max-width: 400px; align-self: center;">
+        <figure class="mycart__body--empty">
           <img  src="./src/img/cartempty.png" alt="emptycart">
         </figure> `;
   }
