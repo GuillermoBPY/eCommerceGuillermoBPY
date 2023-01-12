@@ -494,7 +494,8 @@ body.dark-mode .bgccolor .header__nav--icons {
 
 .card__figure img:hover {
   transform: translateY(-10px);
-  filter: drop-shadow(20px 10px 1px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(20px 24px 1px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow();
 }
 
 .card__addcircle {
