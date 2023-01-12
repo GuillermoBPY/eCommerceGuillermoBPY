@@ -246,12 +246,11 @@ myCartCheckout.addEventListener("click", function (e) {
     localStorage.setItem("newArray", JSON.stringify(newArray))
     items =  JSON.parse(localStorage.getItem("newArray"));
     cartObj = {};
+    alert("Gracias por su compra!");
+    toggleShopCheckout()
+    printGrid(items);
+    printProductsInCart();
   }
-
-  alert("Gracias por su compra!");
-  toggleShopCheckout()
-  printGrid(items);
-  printProductsInCart();
 });
 
 
