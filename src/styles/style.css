@@ -255,6 +255,8 @@ body.dark-mode .bgccolor .header__nav--icons {
   gap: 2rem;
   height: 80%;
   padding: 0 2rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .mycart__body--empty {
