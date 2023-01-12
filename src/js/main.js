@@ -36,7 +36,6 @@ const maindata = [
     quantity: 20,
   }
 ];
-//localStorage.setItem("tarjetas", JSON.stringify(tarjetas));
 
 localStorage.setItem("data", JSON.stringify(maindata))
 let data = JSON.parse(localStorage.getItem("data"))
@@ -54,11 +53,10 @@ btnAddToCart.addEventListener("click", function (e) {
   addproduct (selectProduct)
   printProductsInCart();
 });
-const productsGridModels = document.querySelector(".productsgrid__models");
-const productsGridCards = document.querySelector(".productsgrid__cards");
-
 
 //-----Imprime productos en la grid segun el modelo-----
+const productsGridModels = document.querySelector(".productsgrid__models");
+const productsGridCards = document.querySelector(".productsgrid__cards");
 
 productsGridModels.addEventListener("click", function (e) {
   let target = e.target.parentElement.id;
@@ -96,11 +94,11 @@ function printGrid(items) {
 
 function addproduct (selectProduct){
   if (selectProduct.quantity === 0) {
-    return alert("Cantidad no disponible!");
+    return alert(`Sorry - we don't have enough ${selectProduct.name} in stock`);
   }
   if (cartObj[selectProduct.id]) {
     if (selectProduct.quantity === cartObj[selectProduct.id].amount) {
-      alert("Cantidad no disponible!");
+      alert(`Sorry - we don't have enough ${selectProduct.name} in stock`);
     } else {
       cartObj[selectProduct.id].amount++;
     }
@@ -177,7 +175,7 @@ myCartBody.addEventListener("click", function (e) {
 
   if (e.target.classList.contains("bx-minus")) {
   if (cartObj[idParent].amount === 1) {
-    const eliminar = confirm("Desea eliminar este producto?");
+    const eliminar = confirm(`Are you sure you want to delete ${cartObj[idParent].name}?`);
     if (eliminar) delete cartObj[idParent];
   } else {
     cartObj[idParent].amount--;
@@ -187,7 +185,7 @@ myCartBody.addEventListener("click", function (e) {
     addproduct (selectProduct)
   }
   if (e.target.classList.contains("bx-trash")) {
-    const eliminar = confirm("Desea eliminar este producto?");
+    const eliminar = confirm(`Are you sure you want to delete ${cartObj[idParent].name}?`);
     if (eliminar) delete cartObj[idParent];
   }
   printProductsInCart();
@@ -229,8 +227,8 @@ function printTotalCart() {
 myCartCheckout.addEventListener("click", function (e) {
   if (e.target.classList.contains("mycart__checkout--btn")) {
     const cartActual = Object.values(cartObj);
-    if (!cartActual.length) return alert("Su carrito esta vacio!");
-    const res = confirm("Desea realizar la compra?");
+    if (!cartActual.length) return alert("Oops! Your cart is empty!");
+    const res = confirm("Do you want to confirm your purchase?");
     if (!res) return;
     let newArray = [];
     items.forEach(function (item) {
@@ -246,7 +244,7 @@ myCartCheckout.addEventListener("click", function (e) {
     localStorage.setItem("newArray", JSON.stringify(newArray))
     items =  JSON.parse(localStorage.getItem("newArray"));
     cartObj = {};
-    alert("Gracias por su compra!");
+    alert("Thanks for your purchase!");
     toggleShopCheckout()
     printGrid(items);
     printProductsInCart();
