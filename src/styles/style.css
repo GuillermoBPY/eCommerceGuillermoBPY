@@ -489,11 +489,12 @@ body.dark-mode .bgccolor .header__nav--icons {
 }
 
 .card__figure img {
-  transition: transform 0.5s;
+  transition: transform 0.5s, filter 0.5s;
 }
 
 .card__figure img:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  filter: drop-shadow(20px 10px 1px rgba(0, 0, 0, 0.4));
 }
 
 .card__addcircle {
