@@ -277,6 +277,9 @@ body.dark-mode .bgccolor .header__nav--icons {
   place-content: center;
 }
 
+.mycart__body--prod--fig img{
+  width:62px ;
+}
 .mycart__body--prod--info {
   line-height: 25px;
 }
@@ -326,7 +329,7 @@ body.dark-mode .bgccolor .header__nav--icons {
 }
 
 .mycart__checkout--info {
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -668,7 +671,7 @@ body.dark-mode .bgccolor .header__nav--icons {
   .header__mycart {
     background-color: var(--bodycolor);
     left: auto;
-    width: 25vw;
+    width: 350px
   }
 }
 
